@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/moyu/golang/src/github.com/homike/cpptest/cmake_test/Elem.cpp
+Elem.h
+/home/moyu/golang/src/github.com/homike/cpptest/cmake_test/Elem.h
+
+/home/moyu/golang/src/github.com/homike/cpptest/cmake_test/Elem.h
+iostream
+-
+
+/home/moyu/golang/src/github.com/homike/cpptest/cmake_test/main.cpp
+iostream
+-
+vector
+-
+Elem.h
+/home/moyu/golang/src/github.com/homike/cpptest/cmake_test/Elem.h
+

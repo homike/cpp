@@ -1,0 +1,1 @@
+g++       CMakeFiles/test.dir/main.o CMakeFiles/test.dir/Elem.o  -o test  -L/usr/local/lib -rdynamic 

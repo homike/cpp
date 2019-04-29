@@ -1,0 +1,1 @@
+/home/moyu/golang/src/github.com/homike/cpptest/cmake_test/build/CMakeFiles/test.dir
