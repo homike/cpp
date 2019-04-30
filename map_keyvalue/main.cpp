@@ -2,15 +2,14 @@
 #include<map>
 #include<string>
 #include<algorithm>
-using namespace std;
 
-typedef map<string, string> mapKV;
-typedef pair<string, string> pairKV;
+typedef std::map<std::string, std::string> mapKV;
+typedef std::pair<std::string, std::string> pairKV;
 
-mapKV::const_iterator search(const mapKV& map, const string& strSearch) {
+mapKV::const_iterator search(const mapKV& map, const std::string& strSearch) {
     mapKV::const_iterator i = map.lower_bound(strSearch);
     if (i != map.end()) {
-        const string& key = i->first;
+        const std::string& key = i->first;
         if (key.compare(0, strSearch.size(), strSearch) == 0) {
             return i;
         }
@@ -19,33 +18,33 @@ mapKV::const_iterator search(const mapKV& map, const string& strSearch) {
     return map.end();
 }
 
-void Test(const mapKV& map, const string& strSearch) {
-    cout << strSearch;
+void Test(const mapKV& map, const std::string& strSearch) {
+    std::cout << strSearch;
 
     auto i = search(map, strSearch);
     if (i != map.end()) {
-        cout << '\t' << i->first << ", " << i->second;
+        std::cout << '\t' << i->first << ", " << i->second;
     }
 
-    cout << endl;
+    std::cout << std::endl;
 }
 
 int main(int argc, char *argv[])
 {
-    mapKV tMap;
+    mapKV mapTest;
 
-    tMap.insert(pairKV("John", "AA"));
-    tMap.insert(pairKV("Mary", "BBB"));
-    tMap.insert(pairKV("Mother", "A"));
-    tMap.insert(pairKV("Marlon", "C"));
+    mapTest.insert(pairKV("John", "AA"));
+    mapTest.insert(pairKV("Mary", "BBB"));
+    mapTest.insert(pairKV("Mother", "A"));
+    mapTest.insert(pairKV("Marlon", "C"));
 
-    Test(tMap, "Marl");
-    Test(tMap, "Mo");
-    Test(tMap, "M");
-    Test(tMap, "Mad");
-    Test(tMap, "Mom");
-    Test(tMap, "Perr");
-    Test(tMap, "Jo");
+    Test(mapTest, "Marl");
+    Test(mapTest, "Mo");
+    Test(mapTest, "M");
+    Test(mapTest, "Mad");
+    Test(mapTest, "Mom");
+    Test(mapTest, "Perr");
+    Test(mapTest, "Jo");
 
     return 0;
 }
